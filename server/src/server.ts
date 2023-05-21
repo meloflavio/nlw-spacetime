@@ -10,6 +10,7 @@ import { uploadRoutes } from './routes/upload'
 import { resolve } from 'node:path'
 
 const app = fastify()
+const port = process.env.PORT || 9000
 
 app.register(cors, {
   origin: true,
@@ -28,10 +29,6 @@ app.register(authRoutes)
 app.register(memoriesRoutes)
 app.register(uploadRoutes)
 
-app
-  .listen({
-    port: 3333,
-  })
-  .then(() => {
-    console.log('🚀 HTTP server running on port 3333')
-  })
+app.listen(port).then(() => {
+  console.log('🚀 HTTP server running on port 3333')
+})
