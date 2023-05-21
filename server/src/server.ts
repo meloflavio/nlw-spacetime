@@ -10,7 +10,7 @@ import { uploadRoutes } from './routes/upload'
 import { resolve } from 'node:path'
 
 const app = fastify()
-const port = process.env.PORT || 9000
+const port = 3333
 
 app.register(cors, {
   origin: true,
