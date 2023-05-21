@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": " npx  prisma init --datasource-provider SQLite && npx prisma migrate dev && tsx watch src/server.ts",
+    "start": "tsx src/server.ts",
     "dev": "tsx watch src/server.ts",
     "lin": "eslint src --ext .ts --fix",
     "test": "echo \"Error: no test specified\" && exit 1"

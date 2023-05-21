@@ -4,6 +4,9 @@ import axios from 'axios'
 import { prisma } from '../lib/prisma'
 
 export const authRoutes = async (app: FastifyInstance) => {
+  app.get('/', (req, res) => {
+    res.send('Hello there! Api is working')
+  })
   app.post('/register', async (request) => {
     const bodySchema = z.object({
       code: z.string(),
