@@ -29,6 +29,9 @@ app.register(authRoutes)
 app.register(memoriesRoutes)
 app.register(uploadRoutes)
 
-app.listen(port).then(() => {
+const listenObject = {
+  port,
+}
+app.listen(listenObject).then(() => {
   console.log(`🚀 HTTP server running on port ${port}`)
 })
